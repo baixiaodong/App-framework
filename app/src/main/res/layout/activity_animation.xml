@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.baixd.app.framework.anim.AnimationActivity">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="动画" />
+
+    <TextView
+        android:id="@+id/tv_anim"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/tv"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/holo_green_dark" />
+
+    <Button
+        android:id="@+id/btn_anim_alpha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_anim"
+        android:text="alpha 渐变透明度" />
+
+    <Button
+        android:id="@+id/btn_anim_scale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_anim_alpha"
+        android:text="scale 缩放" />
+
+    <Button
+        android:id="@+id/btn_anim_translate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_anim_scale"
+        android:text="translate 位置变化" />
+
+    <Button
+        android:id="@+id/btn_anim_rotate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_anim_translate"
+        android:text="rotate 旋转" />
+
+    <Button
+        android:id="@+id/btn_animation_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_anim_rotate"
+        android:text="animationSet 组合动画"/>
+
+    <Button
+        android:id="@+id/btn_animation_set2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_animation_set"
+        android:text="animationSet 组合动画2"/>
+
+</RelativeLayout>

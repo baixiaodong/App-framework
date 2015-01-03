@@ -1,0 +1,35 @@
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <script type="text/javascript" src="ichart.1.2.min.js"></script>
+    <script type="text/javascript">
+			$(function(){
+				var data = [
+				        	{
+				        		name : '北京',
+				        		value:[2,12,14,20,28,32,34,36,33,24,14,4],
+				        		color:'#1f7e92'
+				        	}
+				       ];
+
+				var chart = new iChart.Area2D({
+						render : 'canvasDiv',
+						data: data,
+						turn_off_touchmove:true,
+						title : '北京2012年平均温度情况',
+						width : 800,
+						height : 400,
+						//fit:true,
+						labels:["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"]
+					});
+
+				chart.draw();
+			});
+
+
+    </script>
+</head>
+<body>
+    <div id='canvasDiv'></div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <script type="text/javascript" src="ichart.1.2.min.js"></script>
+    <script type="text/javascript">
+        var chart;
+		$(function(){
+		    var data = [
+			    {
+				    name : '北京',
+				    value:[5,12,14,20,28,32,34,36,33,24,14,4],
+				    color:'#1f7e92'
+				}];
+
+			chart = new iChart.Area2D({
+                    render : 'canvasDiv',
+                    data: data,
+                    turn_off_touchmove:true,
+                    title : '北京2012年平均温度情况',
+                    width : 950,
+                    height : 400,
+                    //fit:true,
+                    labels:["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"]
+                });
+
+			chart.draw();
+		});
+
+        function setContentInfo(data)  {
+            var jsonObjects = eval(data);   //通过eval方法处理得到json对象数组
+            chart.push("data",jsonObjects);
+            chart.setUp();
+            chart.draw();
+        }
+
+    </script>
+</head>
+<body>
+<div id='canvasDiv'></div>
+</body>
+</html>
