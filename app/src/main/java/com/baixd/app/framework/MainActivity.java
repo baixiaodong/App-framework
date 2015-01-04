@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.baixd.app.framework.anim.AnimationActivity;
+import com.baixd.app.framework.dialog.DialogActivity;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -22,6 +23,7 @@ public class MainActivity extends ActionBarActivity {
     private Button mButtonSlideListView;
     private Button mButtonSwipeGesture;
     private Button mButtonAnimation;
+    private Button mButtonDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,7 @@ public class MainActivity extends ActionBarActivity {
         mButtonSlideListView = (Button)findViewById(R.id.btn_slide_listview);
         mButtonSwipeGesture = (Button)findViewById(R.id.btn_swipe_gesture);
         mButtonAnimation = (Button)findViewById(R.id.btn_animation);
+        mButtonDialog = (Button)findViewById(R.id.btn_dialog);
     }
 
 
@@ -100,6 +103,14 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, AnimationActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mButtonDialog.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, DialogActivity.class);
                 startActivity(intent);
             }
         });

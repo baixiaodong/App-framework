@@ -19,5 +19,7 @@
     <string name="str_sky_blue">#33B5E5</string>
     <string name="title_activity_test">TestActivity</string>
     <string name="title_activity_animation">AnimationActivity</string>
+    <string name="title_activity_dialog">DialogActivity</string>
+    <string name="dialog">对话框</string>
 
 </resources>

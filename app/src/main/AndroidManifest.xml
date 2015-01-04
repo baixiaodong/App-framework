@@ -48,6 +48,10 @@
             android:name=".anim.AnimationActivity"
             android:label="@string/title_activity_animation" >
         </activity>
+        <activity
+            android:name=".dialog.DialogActivity"
+            android:label="@string/title_activity_dialog" >
+        </activity>
     </application>
 
 </manifest>
