@@ -62,25 +62,25 @@
         android:text="弹出对话框"/>
 
     <Button
-        android:id="@+id/btn_swipe_gesture3"
+        android:id="@+id/btn_scroll_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_dialog"
-        android:text="Swipe Gesture3"/>
+        android:text="Scroll View"/>
 
     <Button
-    android:id="@+id/btn_swipe_gesture4"
+    android:id="@+id/btn_cover_flow"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_below="@id/btn_swipe_gesture3"
-    android:text="Swipe Gesture4"/>
+    android:layout_below="@id/btn_scroll_view"
+    android:text="Cover Flow"/>
 
 
     <Button
         android:id="@+id/btn_swipe_gesture5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn_swipe_gesture4"
+        android:layout_below="@id/btn_cover_flow"
         android:text="Swipe Gesture5"/>
 
     <Button

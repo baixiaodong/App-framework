@@ -10,6 +10,7 @@ import android.widget.Button;
 
 import com.baixd.app.framework.anim.AnimationActivity;
 import com.baixd.app.framework.dialog.DialogActivity;
+import com.baixd.app.framework.scroll.ScrollActivity;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -24,6 +25,8 @@ public class MainActivity extends ActionBarActivity {
     private Button mButtonSwipeGesture;
     private Button mButtonAnimation;
     private Button mButtonDialog;
+    private Button mButtonScrollView;
+    private Button mButtonCoverFlow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +49,8 @@ public class MainActivity extends ActionBarActivity {
         mButtonSwipeGesture = (Button)findViewById(R.id.btn_swipe_gesture);
         mButtonAnimation = (Button)findViewById(R.id.btn_animation);
         mButtonDialog = (Button)findViewById(R.id.btn_dialog);
+        mButtonScrollView = (Button) findViewById(R.id.btn_scroll_view);
+        mButtonCoverFlow = (Button) findViewById(R.id.btn_cover_flow);
     }
 
 
@@ -111,6 +116,22 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, DialogActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mButtonScrollView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ScrollActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mButtonCoverFlow.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, com.baixd.app.framework.coverflow.MainActivity.class);
                 startActivity(intent);
             }
         });

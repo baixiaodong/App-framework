@@ -21,5 +21,13 @@
     <string name="title_activity_animation">AnimationActivity</string>
     <string name="title_activity_dialog">DialogActivity</string>
     <string name="dialog">对话框</string>
+    <string name="title_activity_scroll">ScrollActivity</string>
+    <string name="scroll_view_title">ScrollView</string>
+
+    <string name="title_cover_flow">FancyCoverFlow</string>
+    <string name="activity_label_inflate_xml">XML Inflate Example</string>
+    <string name="activity_label_simple">Simple Example</string>
+    <string name="activity_label_viewgroup">ViewGroup Example</string>
+    <string name="activity_label_viewgroupreflection">ViewGroup with Reflection</string>
 
 </resources>

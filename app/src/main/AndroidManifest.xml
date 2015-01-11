@@ -52,6 +52,32 @@
             android:name=".dialog.DialogActivity"
             android:label="@string/title_activity_dialog" >
         </activity>
+        <activity
+            android:name=".scroll.ScrollActivity"
+            android:label="@string/title_activity_scroll" >
+        </activity>
+
+        <activity
+            android:name="com.baixd.app.framework.coverflow.MainActivity"
+            android:label="@string/title_cover_flow">
+        </activity>
+
+        <activity
+            android:name="com.baixd.app.framework.coverflow.example.SimpleExample"
+            android:label="@string/activity_label_simple"/>
+
+        <activity
+            android:name="com.baixd.app.framework.coverflow.example.ViewGroupExample"
+            android:label="@string/activity_label_viewgroup"/>
+
+        <activity
+            android:name="com.baixd.app.framework.coverflow.example.ViewGroupReflectionExample"
+            android:label="@string/activity_label_viewgroupreflection"/>
+
+        <activity
+            android:name="com.baixd.app.framework.coverflow.example.XmlInflateExample"
+            android:label="@string/activity_label_inflate_xml"
+            />
     </application>
 
 </manifest>
