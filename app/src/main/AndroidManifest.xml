@@ -56,28 +56,58 @@
             android:name=".scroll.ScrollActivity"
             android:label="@string/title_activity_scroll" >
         </activity>
-
         <activity
-            android:name="com.baixd.app.framework.coverflow.MainActivity"
-            android:label="@string/title_cover_flow">
+            android:name=".coverflow.MainActivity"
+            android:label="@string/title_cover_flow" >
         </activity>
-
         <activity
-            android:name="com.baixd.app.framework.coverflow.example.SimpleExample"
-            android:label="@string/activity_label_simple"/>
-
+            android:name=".coverflow.example.SimpleExample"
+            android:label="@string/activity_label_simple" />
         <activity
-            android:name="com.baixd.app.framework.coverflow.example.ViewGroupExample"
-            android:label="@string/activity_label_viewgroup"/>
-
+            android:name=".coverflow.example.ViewGroupExample"
+            android:label="@string/activity_label_viewgroup" />
         <activity
-            android:name="com.baixd.app.framework.coverflow.example.ViewGroupReflectionExample"
-            android:label="@string/activity_label_viewgroupreflection"/>
-
+            android:name=".coverflow.example.ViewGroupReflectionExample"
+            android:label="@string/activity_label_viewgroupreflection" />
         <activity
-            android:name="com.baixd.app.framework.coverflow.example.XmlInflateExample"
-            android:label="@string/activity_label_inflate_xml"
-            />
+            android:name=".coverflow.example.XmlInflateExample"
+            android:label="@string/activity_label_inflate_xml" />
+        <activity
+            android:name=".my.CustomActivity"
+            android:label="@string/title_activity_custom" >
+        </activity>
+        <activity
+            android:name=".my.LayoutActivity"
+            android:label="@string/title_activity_layout" >
+        </activity>
+        <activity
+            android:name=".my.TableActivity"
+            android:label="@string/title_activity_table" >
+        </activity>
+        <activity
+            android:name=".widget.CheckBoxActivity"
+            android:label="@string/title_activity_check_box" >
+        </activity>
+        <activity
+            android:name=".widget.WidgetActivity"
+            android:label="@string/title_activity_widget" >
+        </activity>
+        <activity
+            android:name=".widget.RadioGroupActiviy"
+            android:label="@string/title_activity_radio_group_activiy" >
+        </activity>
+        <activity
+            android:name=".widget.SpinnerActiviy"
+            android:label="@string/title_activity_spinner_activiy" >
+        </activity>
+        <activity
+            android:name=".widget.AutoCompleteActiviy"
+            android:label="@string/title_activity_auto_complete_activiy" >
+        </activity>
+        <activity
+            android:name=".widget.DateTimeActivity"
+            android:label="@string/title_activity_date_time" >
+        </activity>
     </application>
 
 </manifest>

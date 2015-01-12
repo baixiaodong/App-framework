@@ -23,11 +23,19 @@
     <string name="dialog">对话框</string>
     <string name="title_activity_scroll">ScrollActivity</string>
     <string name="scroll_view_title">ScrollView</string>
-
     <string name="title_cover_flow">FancyCoverFlow</string>
     <string name="activity_label_inflate_xml">XML Inflate Example</string>
     <string name="activity_label_simple">Simple Example</string>
     <string name="activity_label_viewgroup">ViewGroup Example</string>
     <string name="activity_label_viewgroupreflection">ViewGroup with Reflection</string>
+    <string name="title_activity_custom">CustomActivity</string>
+    <string name="title_activity_layout">LayoutActivity</string>
+    <string name="title_activity_table">TableActivity</string>
+    <string name="title_activity_check_box">CheckBoxActivity</string>
+    <string name="title_activity_widget">WidgetActivity</string>
+    <string name="title_activity_radio_group_activiy">RadioGroupActiviy</string>
+    <string name="title_activity_spinner_activiy">SpinnerActiviy</string>
+    <string name="title_activity_auto_complete_activiy">AutoCompleteActiviy</string>
+    <string name="title_activity_date_time">DateTimeActivity</string>
 
 </resources>

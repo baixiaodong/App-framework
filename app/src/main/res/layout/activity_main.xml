@@ -77,25 +77,25 @@
 
 
     <Button
-        android:id="@+id/btn_swipe_gesture5"
+        android:id="@+id/btn_activity_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_cover_flow"
-        android:text="Swipe Gesture5"/>
+        android:text="Activity Layout"/>
 
     <Button
-        android:id="@+id/btn_swipe_gesture6"
+        android:id="@+id/btn_widget"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn_swipe_gesture5"
-        android:text="Swipe Gesture6"/>
+        android:layout_below="@id/btn_activity_layout"
+        android:text="Widget"/>
 
 
     <Button
         android:id="@+id/btn_swipe_gesture7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn_swipe_gesture6"
+        android:layout_below="@id/btn_widget"
         android:text="Swipe Gesture7"/>
 
 
