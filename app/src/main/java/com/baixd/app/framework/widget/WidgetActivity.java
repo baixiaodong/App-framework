@@ -7,7 +7,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Spinner;
 
 import com.baixd.app.framework.R;
 
@@ -18,6 +17,8 @@ public class WidgetActivity extends ActionBarActivity {
     private Button mBtnSpinner;
     private Button mBtnAutoComplete;
     private Button mBtnDateTimePicker;
+    private Button mBtnProgressBar;
+    private Button mBtnRatingBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,8 @@ public class WidgetActivity extends ActionBarActivity {
         mBtnSpinner = (Button) findViewById(R.id.btn_spinner);
         mBtnAutoComplete = (Button)findViewById(R.id.btn_autocomplete);
         mBtnDateTimePicker = (Button)findViewById(R.id.btn_date_time_picker);
+        mBtnProgressBar = (Button) findViewById(R.id.btn_progressbar);
+        mBtnRatingBar= (Button) findViewById(R.id.btn_rating_bar);
     }
 
     private void registerListener() {
@@ -74,12 +77,32 @@ public class WidgetActivity extends ActionBarActivity {
         mBtnDateTimePicker.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(WidgetActivity.this, DateTimeActivity.class);
+                Intent intent = new Intent(WidgetActivity.this, DateTimePickerActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mBtnProgressBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(WidgetActivity.this, ProgressBarActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mBtnRatingBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(WidgetActivity.this, RatingBarActivity.class);
                 startActivity(intent);
             }
         });
     }
 
+    public void openSeekBarActivity(View view){
+        Intent intent = new Intent(WidgetActivity.this, SeekBarActivity.class);
+        startActivity(intent);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

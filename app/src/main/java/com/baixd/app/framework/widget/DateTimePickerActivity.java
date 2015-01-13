@@ -9,7 +9,7 @@ import android.widget.TimePicker;
 
 import com.baixd.app.framework.R;
 
-public class DateTimeActivity extends ActionBarActivity {
+public class DateTimePickerActivity extends ActionBarActivity {
 
     private DatePicker datePicker;
     private TimePicker timePicker;
