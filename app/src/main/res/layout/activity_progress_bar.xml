@@ -6,24 +6,28 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.baixd.app.framework.widget.DateTimePickerActivity">
+    tools:context="com.baixd.app.framework.widget.ProgressActivity">
 
     <TextView
-        android:id="@+id/tv_date_time_picker"
+        android:id="@+id/tv_progressbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/title_activity_date_time" />
+        android:text="@string/title_activity_progress" />
 
-    <DatePicker
-        android:id="@+id/date"
+    <ProgressBar
+        android:id="@+id/progressbar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_progressbar"/>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/progressbar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tv_date_time_picker"></DatePicker>
-
-    <TimePicker
-        android:id="@+id/time"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/date"></TimePicker>
+        android:layout_below="@id/progressbar1"
+        android:progress="50"
+        android:secondaryProgress="75"
+        android:max="100"/>
 
 </RelativeLayout>

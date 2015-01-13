@@ -49,4 +49,26 @@
         android:layout_below="@id/btn_autocomplete"
         android:text="时间日期"/>
 
+    <Button
+        android:id="@+id/btn_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_date_time_picker"
+        android:text="进度条"/>
+
+    <Button
+        android:id="@+id/btn_seekbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_progressbar"
+        android:text="拖动条SeekBar"
+        android:onClick="openSeekBarActivity"/>
+
+    <Button
+        android:id="@+id/btn_rating_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_seekbar"
+        android:text="评分RatingBar"/>
+
 </RelativeLayout>

@@ -6,24 +6,21 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.baixd.app.framework.widget.DateTimePickerActivity">
+    tools:context="com.baixd.app.framework.widget.SeekBarActivity">
 
     <TextView
-        android:id="@+id/tv_date_time_picker"
+        android:id="@+id/tv_seekbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/title_activity_date_time" />
+        android:text="@string/hello_world" />
 
-    <DatePicker
-        android:id="@+id/date"
+    <SeekBar
+        android:id="@+id/seekbar1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tv_date_time_picker"></DatePicker>
-
-    <TimePicker
-        android:id="@+id/time"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/date"></TimePicker>
+        android:layout_below="@id/tv_seekbar"
+        android:max="100"
+        android:progress="50"
+        />
 
 </RelativeLayout>
