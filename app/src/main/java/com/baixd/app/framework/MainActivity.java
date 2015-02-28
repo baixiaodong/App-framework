@@ -3,16 +3,19 @@ package com.baixd.app.framework;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.baixd.app.framework.anim.AnimationActivity;
 import com.baixd.app.framework.dialog.DialogActivity;
-import com.baixd.app.framework.my.CustomActivity;
+import com.baixd.app.framework.fragment.FragmentActivity;
 import com.baixd.app.framework.my.LayoutActivity;
 import com.baixd.app.framework.scroll.ScrollActivity;
+import com.baixd.app.framework.widget.GridViewActivity;
 import com.baixd.app.framework.widget.WidgetActivity;
 
 
@@ -32,6 +35,8 @@ public class MainActivity extends ActionBarActivity {
     private Button mButtonCoverFlow;
     private Button mButtonActivityLayout;
     private Button mButtonWidget;
+    private Button mButtonFragment;
+    private Button mButtonGrid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +63,8 @@ public class MainActivity extends ActionBarActivity {
         mButtonCoverFlow = (Button) findViewById(R.id.btn_cover_flow);
         mButtonActivityLayout = (Button) findViewById(R.id.btn_activity_layout);
         mButtonWidget = (Button) findViewById(R.id.btn_widget);
+        mButtonFragment = (Button) findViewById(R.id.btn_fragment);
+        mButtonGrid = (Button) findViewById(R.id.btn_grid);
     }
 
 
@@ -159,6 +166,23 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
+        mButtonFragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, FragmentActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mButtonGrid.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, GridViewActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override
@@ -175,11 +199,30 @@ public class MainActivity extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+        switch (id){
+            case R.id.action_settings:
+                Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.action_about:
+                Toast.makeText(this, "About", Toast.LENGTH_SHORT).show();
+                break;
+        }
+
+
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode == KeyEvent.KEYCODE_MENU){
+            return true;
+        }else{
+            return super.onKeyDown(keyCode, event);
+        }
     }
 }
