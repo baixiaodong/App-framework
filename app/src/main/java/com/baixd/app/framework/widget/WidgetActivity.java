@@ -19,6 +19,7 @@ public class WidgetActivity extends ActionBarActivity {
     private Button mBtnDateTimePicker;
     private Button mBtnProgressBar;
     private Button mBtnRatingBar;
+    private Button mBtnImageViewAndButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,7 @@ public class WidgetActivity extends ActionBarActivity {
         mBtnDateTimePicker = (Button)findViewById(R.id.btn_date_time_picker);
         mBtnProgressBar = (Button) findViewById(R.id.btn_progressbar);
         mBtnRatingBar= (Button) findViewById(R.id.btn_rating_bar);
+        mBtnImageViewAndButton = (Button)findViewById(R.id.btn_image_view_button);
     }
 
     private void registerListener() {
@@ -97,10 +99,24 @@ public class WidgetActivity extends ActionBarActivity {
                 startActivity(intent);
             }
         });
+
+        mBtnImageViewAndButton.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(WidgetActivity.this, ImageViewAndButtonActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public void openSeekBarActivity(View view){
         Intent intent = new Intent(WidgetActivity.this, SeekBarActivity.class);
+        startActivity(intent);
+    }
+
+    public void openImageSwitchAndGalleryActivity(View view){
+        Intent intent = new Intent(this, ImageSwitchAndGalleryActivity.class);
         startActivity(intent);
     }
 
