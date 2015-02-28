@@ -100,9 +100,9 @@ public class GridViewActivity extends ActionBarActivity {
                 imageView = (ImageView) convertView;
             }
 
-//            imageView.setImageResource(thumbs[position]);
-            Bitmap bm = bitmapList.get(position).get();
-            imageView.setImageBitmap(bm);
+            imageView.setImageResource(thumbs[position]);
+//            Bitmap bm = bitmapList.get(position).get();
+//            imageView.setImageBitmap(bm);
 
 
 
