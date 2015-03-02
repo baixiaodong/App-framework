@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.baixd.app.framework" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -105,8 +108,48 @@
             android:label="@string/title_activity_auto_complete_activiy" >
         </activity>
         <activity
-            android:name=".widget.DateTimeActivity"
+            android:name=".widget.DateTimePickerActivity"
             android:label="@string/title_activity_date_time" >
+        </activity>
+        <activity
+            android:name=".widget.ProgressBarActivity"
+            android:label="@string/title_activity_progress" >
+        </activity>
+        <activity
+            android:name=".widget.SeekBarActivity"
+            android:label="@string/title_activity_seek_bar" >
+        </activity>
+        <activity
+            android:name=".widget.RatingBarActivity"
+            android:label="@string/title_activity_rating_bar" >
+        </activity>
+        <activity
+            android:name=".widget.ImageViewAndButtonActivity"
+            android:label="@string/title_activity_image_view_and_button" >
+        </activity>
+        <activity
+            android:name=".widget.ImageSwitchAndGalleryActivity"
+            android:label="@string/title_activity_image_switch_and_gallery" >
+        </activity>
+        <activity
+            android:name=".fragment.FragmentActivity"
+            android:label="@string/title_activity_fragment" >
+        </activity>
+        <activity
+            android:name=".fragment.FirstActivity"
+            android:label="@string/title_activity_frist" >
+        </activity>
+        <activity
+            android:name=".fragment.LifecycleFragmentActivity"
+            android:label="@string/title_activity_lifecycle_fragment" >
+        </activity>
+        <activity
+            android:name=".fragment.CommunicationActivity"
+            android:label="@string/title_activity_communication" >
+        </activity>
+        <activity
+            android:name=".widget.GridViewActivity"
+            android:label="@string/title_activity_grid" >
         </activity>
     </application>
 
