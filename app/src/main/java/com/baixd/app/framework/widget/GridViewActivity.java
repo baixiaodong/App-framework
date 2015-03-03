@@ -4,12 +4,15 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -18,10 +21,14 @@ import com.baixd.app.framework.R;
 
 import java.lang.ref.SoftReference;
 import java.util.ArrayList;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class GridViewActivity extends ActionBarActivity {
 
     private static final String TAG = "GridViewActivity";
+
+    private String[] imageThumbUrls = Images.IMAGE_THUMB_URLS;
 
     private GridView mGridView;
 
@@ -33,9 +40,10 @@ public class GridViewActivity extends ActionBarActivity {
         setContentView(R.layout.activity_grid);
 
         mGridView = (GridView) findViewById(R.id.gv1);
-        mGridView.setAdapter(new ImageAdapter(this));
+//        mGridView.setAdapter(new ImageAdapter(this));
+        mGridView.setAdapter(new ImageAdapter(this, mGridView, imageThumbUrls));
 
-        new LoadImageThread().start();
+//        new LoadImageThread().start();
     }
 
     private int[] thumbs = {
@@ -65,50 +73,148 @@ public class GridViewActivity extends ActionBarActivity {
     /**
      * 实现BaseAdapter
      */
-    public class ImageAdapter extends BaseAdapter{
+    public class ImageAdapter extends BaseAdapter implements AbsListView.OnScrollListener {
 
         private Context mContext;
+        private GridView mGridView;
+        private String [] imageThumbUrls;
+        private int mFirstVisibleItem;
+        private int mVisibleItemCount;
+        private boolean isFirstEnter = true;
+
+        private ImageMemoryCache memoryCache;
+        private ImageFileCache fileCache;
 
         public ImageAdapter(Context context){
             this.mContext = context;
         }
 
+        public ImageAdapter(Context context, GridView gridView, String[] imageThumbUrls){
+            this.mContext = context;
+            this.mGridView = gridView;
+            this.imageThumbUrls = imageThumbUrls;
+
+            memoryCache = new ImageMemoryCache(context);
+            fileCache = new ImageFileCache();
+
+            mGridView.setOnScrollListener(this);
+        }
+
         @Override
         public int getCount() {
-            return thumbs.length;
+//            return thumbs.length;
+            return imageThumbUrls.length;
         }
 
         @Override
         public Object getItem(int position) {
-            return null;
+            return imageThumbUrls[position];
         }
 
         @Override
         public long getItemId(int position) {
-            return 0;
+            return position;
         }
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            ImageView imageView;
-            if(convertView == null){
+            final ImageView imageView;
+            final String imageUrl = imageThumbUrls[position];
+
+            if (convertView == null) {
                 imageView = new ImageView(mContext);
                 imageView.setLayoutParams(new GridView.LayoutParams(450, 450));
                 imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                imageView.setPadding(8,8,8,8);
-            }else{
+                imageView.setPadding(8, 8, 8, 8);
+            } else {
                 imageView = (ImageView) convertView;
             }
 
-            imageView.setImageResource(thumbs[position]);
-//            Bitmap bm = bitmapList.get(position).get();
-//            imageView.setImageBitmap(bm);
-
-
-
+//            imageView.setImageResource(thumbs[position]);
+//            imageView.setTag(imageUrl);
+            getBitmap(imageUrl, new OnImageLoaderListener() {
+                @Override
+                public void onImageLoader(Bitmap bmp) {
+                    imageView.setImageBitmap(bmp);
+                }
+            });
+//            imageView.setImageBitmap(getBitmap(imageUrl));
 
             return imageView;
         }
+
+        @Override
+        public void onScrollStateChanged(AbsListView view, int scrollState) {
+
+        }
+
+        @Override
+        public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+            mFirstVisibleItem = firstVisibleItem;
+            mVisibleItemCount = visibleItemCount;
+//            if(isFirstEnter && mVisibleItemCount > 0){
+//                showImage(mFirstVisibleItem, mVisibleItemCount);
+//                isFirstEnter = false;
+//            }
+
+        }
+
+        private void showImage(int mFirstVisibleItem, int mVisibleItemCount) {
+
+        }
+
+        public Bitmap getBitmap(final String url, final OnImageLoaderListener onImageLoaderListener) {
+            Bitmap result = null;
+
+            final Handler handler = new Handler(){
+                @Override
+                public void handleMessage(Message msg) {
+                    Bitmap result = (Bitmap)msg.obj;
+                    onImageLoaderListener.onImageLoader(result);
+                }
+            };
+
+
+
+            ExecutorService executorService = Executors.newFixedThreadPool(1);
+            executorService.execute(new Runnable() {
+                @Override
+                public void run() {
+                    // 从内存缓存中获取图片
+                    Bitmap result = memoryCache.getBitmapFromCache(url);
+                    if (result == null) {
+                        // 文件缓存中获取
+                        result = fileCache.getImage(url);
+                        Log.i(TAG, "file image result --> " + result);
+                        if (result == null) {
+                            // 从网络获取
+                            result = ImageGetFromHttp.downloadBitmap(url);
+                            Log.i(TAG, "net image result --> " + result);
+                            if (result != null) {
+                                fileCache.saveBitmap(result, url);
+                                memoryCache.addBitmapToCache(url, result);
+                            }
+                        } else {
+                            // 添加到内存缓存
+                            memoryCache.addBitmapToCache(url, result);
+                        }
+                    }
+                    if(result != null){
+                        Message msg = new Message();
+                        msg.obj = result;
+                        handler.sendMessage(msg);
+                    }
+
+                }
+            });
+
+            Log.i(TAG, "image result --> " + result);
+            return result;
+        }
+    }
+
+    public interface OnImageLoaderListener{
+        public void onImageLoader(Bitmap bmp);
     }
 
 
