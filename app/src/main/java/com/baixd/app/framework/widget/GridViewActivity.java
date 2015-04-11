@@ -32,6 +32,8 @@ public class GridViewActivity extends ActionBarActivity {
 
     private GridView mGridView;
 
+    private int width;
+
     private ArrayList<SoftReference<Bitmap>> bitmapList = new ArrayList<SoftReference<Bitmap>>();
 
     @Override
@@ -44,6 +46,8 @@ public class GridViewActivity extends ActionBarActivity {
         mGridView.setAdapter(new ImageAdapter(this, mGridView, imageThumbUrls));
 
 //        new LoadImageThread().start();
+
+        width = this.getWindowManager().getDefaultDisplay().getWidth();
     }
 
     private int[] thumbs = {
@@ -123,12 +127,14 @@ public class GridViewActivity extends ActionBarActivity {
 
             if (convertView == null) {
                 imageView = new ImageView(mContext);
-                imageView.setLayoutParams(new GridView.LayoutParams(450, 450));
-                imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                imageView.setPadding(8, 8, 8, 8);
             } else {
                 imageView = (ImageView) convertView;
             }
+
+            int wh = (width-20) / 3 ;
+            imageView.setLayoutParams(new GridView.LayoutParams(wh, wh));
+            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            imageView.setPadding(10, 10, 10, 10);
 
 //            imageView.setImageResource(thumbs[position]);
 //            imageView.setTag(imageUrl);

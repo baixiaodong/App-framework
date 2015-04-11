@@ -20,6 +20,7 @@ public class WidgetActivity extends ActionBarActivity {
     private Button mBtnProgressBar;
     private Button mBtnRatingBar;
     private Button mBtnImageViewAndButton;
+    private Button mBtnNotification;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,7 @@ public class WidgetActivity extends ActionBarActivity {
         mBtnProgressBar = (Button) findViewById(R.id.btn_progressbar);
         mBtnRatingBar= (Button) findViewById(R.id.btn_rating_bar);
         mBtnImageViewAndButton = (Button)findViewById(R.id.btn_image_view_button);
+        mBtnNotification = (Button) findViewById(R.id.btn_notification);
     }
 
     private void registerListener() {
@@ -117,6 +119,11 @@ public class WidgetActivity extends ActionBarActivity {
 
     public void openImageSwitchAndGalleryActivity(View view){
         Intent intent = new Intent(this, ImageSwitchAndGalleryActivity.class);
+        startActivity(intent);
+    }
+
+    public void onNotification(View view){
+        Intent intent = new Intent(this, NotificationActivity.class);
         startActivity(intent);
     }
 

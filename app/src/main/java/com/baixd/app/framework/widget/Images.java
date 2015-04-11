@@ -6,8 +6,9 @@ package com.baixd.app.framework.widget;
 public class Images {
 
     public final static String[] IMAGE_THUMB_URLS = new String[]{
-            //"http://a.hiphotos.baidu.com/image/pic/item/80cb39dbb6fd526660c22013a818972bd50736cf.jpg",
-            //"http://m3.biz.itc.cn/pic/new/n/98/91/Img7579198_n.jpg",
+            "http://f.hiphotos.baidu.com/image/pic/item/9d82d158ccbf6c8135dbebeebf3eb13532fa40cc.jpg",
+            "http://a.hiphotos.baidu.com/image/pic/item/80cb39dbb6fd526660c22013a818972bd50736cf.jpg",
+            "http://m3.biz.itc.cn/pic/new/n/98/91/Img7579198_n.jpg",
             "https://lh6.googleusercontent.com/-55osAWw3x0Q/URquUtcFr5I/AAAAAAAAAbs/rWlj1RUKrYI/s160-c/A%252520Photographer.jpg",
             "https://lh4.googleusercontent.com/--dq8niRp7W4/URquVgmXvgI/AAAAAAAAAbs/-gnuLQfNnBA/s160-c/A%252520Song%252520of%252520Ice%252520and%252520Fire.jpg",
             "https://lh5.googleusercontent.com/-7qZeDtRKFKc/URquWZT1gOI/AAAAAAAAAbs/hqWgteyNXsg/s160-c/Another%252520Rockaway%252520Sunset.jpg",

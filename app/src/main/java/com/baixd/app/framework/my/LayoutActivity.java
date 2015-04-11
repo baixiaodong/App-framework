@@ -18,6 +18,7 @@ public class LayoutActivity extends ActionBarActivity {
 
     private Button mButtonLinearAndRelativeLayout;
     private Button mButtonTableLayout;
+    private Button mButtonCustom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,7 @@ public class LayoutActivity extends ActionBarActivity {
     private void initView() {
         mButtonLinearAndRelativeLayout = (Button) findViewById(R.id.btn_linear_rel_layout);
         mButtonTableLayout = (Button) findViewById(R.id.btn_tablelayout);
+        mButtonCustom = (Button) findViewById(R.id.btn_custom);
     }
 
     private void registerListener() {
@@ -49,6 +51,14 @@ public class LayoutActivity extends ActionBarActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(LayoutActivity.this, TableActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mButtonCustom.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(LayoutActivity.this, Custom2Activity.class);
                 startActivity(intent);
             }
         });

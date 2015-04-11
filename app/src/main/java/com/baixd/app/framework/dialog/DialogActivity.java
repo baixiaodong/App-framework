@@ -25,11 +25,13 @@ public class DialogActivity extends ActionBarActivity {
     private static final int DIALOG2 = 2;
     private static final int DIALOG3 = 3;
     private static final int DIALOG4 = 4;
+    private static final int DIALOG5 = 5;
 
-    private Button mButtonDialg1;
-    private Button mButtonDialg2;
-    private Button mButtonDialg3;
-    private Button mButtonDialg4;
+    private Button mButtonDialog1;
+    private Button mButtonDialog2;
+    private Button mButtonDialog3;
+    private Button mButtonDialog4;
+    private Button mButtonDialog5;
 
 
     @Override
@@ -43,6 +45,8 @@ public class DialogActivity extends ActionBarActivity {
                 return buildDialog3(DialogActivity.this);
             case DIALOG4:
                 return buildDialog4(DialogActivity.this);
+            case DIALOG5:
+                return buildDialog5(DialogActivity.this);
         }
         return null;
     }
@@ -60,44 +64,53 @@ public class DialogActivity extends ActionBarActivity {
         setContentView(R.layout.activity_dialog);
 
         initView();
-        registListener();
+        registerListener();
     }
 
     private void initView(){
-        mButtonDialg1 = (Button) findViewById(R.id.btn_dialog1);
-        mButtonDialg2 = (Button) findViewById(R.id.btn_dialog2);
-        mButtonDialg3 = (Button) findViewById(R.id.btn_dialog3);
-        mButtonDialg4 = (Button) findViewById(R.id.btn_dialog4);
+        mButtonDialog1 = (Button) findViewById(R.id.btn_dialog1);
+        mButtonDialog2 = (Button) findViewById(R.id.btn_dialog2);
+        mButtonDialog3 = (Button) findViewById(R.id.btn_dialog3);
+        mButtonDialog4 = (Button) findViewById(R.id.btn_dialog4);
+        mButtonDialog5 = (Button) findViewById(R.id.btn_dialog5);
     }
 
-    private void registListener(){
-        mButtonDialg1.setOnClickListener(new View.OnClickListener() {
+    private void registerListener(){
+        mButtonDialog1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialog(DIALOG1);
             }
         });
 
-        mButtonDialg2.setOnClickListener(new View.OnClickListener() {
+        mButtonDialog2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialog(DIALOG2);
             }
         });
 
-        mButtonDialg3.setOnClickListener(new View.OnClickListener() {
+        mButtonDialog3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialog(DIALOG3);
             }
         });
 
-        mButtonDialg4.setOnClickListener(new View.OnClickListener() {
+        mButtonDialog4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialog(DIALOG4);
             }
         });
+
+        mButtonDialog5.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                showDialog(DIALOG5);
+            }
+        });
+
     }
 
     private Dialog buildDialog1(Context context){
@@ -192,6 +205,15 @@ public class DialogActivity extends ActionBarActivity {
         return dialog;
     }
 
+
+    private Dialog buildDialog5(Context context){
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setTitle("异常信息");
+        builder.setIcon(R.drawable.alert_dialog_icon);
+        builder.setMessage("应用发生异常，应用发生异常，，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常，应用发生异常！");
+        builder.setNegativeButton("关闭", null);
+        return builder.create();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

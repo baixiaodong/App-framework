@@ -11,10 +11,16 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.baixd.app.framework.anim.AnimationActivity;
+import com.baixd.app.framework.assistant.MobileAssistantActivity;
+import com.baixd.app.framework.broadcast.MyBroadcastReceiverActivity;
+import com.baixd.app.framework.coverflow.CoverFlowActivity;
+import com.baixd.app.framework.custom.UIActivity;
 import com.baixd.app.framework.dialog.DialogActivity;
 import com.baixd.app.framework.fragment.FragmentActivity;
+import com.baixd.app.framework.handler.HandlerActivity;
 import com.baixd.app.framework.my.LayoutActivity;
 import com.baixd.app.framework.scroll.ScrollActivity;
+import com.baixd.app.framework.service.MyServiceActivity;
 import com.baixd.app.framework.widget.GridViewActivity;
 import com.baixd.app.framework.widget.WidgetActivity;
 
@@ -37,6 +43,11 @@ public class MainActivity extends ActionBarActivity {
     private Button mButtonWidget;
     private Button mButtonFragment;
     private Button mButtonGrid;
+    private Button mButtonBroadcast;
+    private Button mButtonService;
+    private Button mButtonAssistant;
+    private Button mButtonCustomUI;
+    private Button mButtonHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +76,11 @@ public class MainActivity extends ActionBarActivity {
         mButtonWidget = (Button) findViewById(R.id.btn_widget);
         mButtonFragment = (Button) findViewById(R.id.btn_fragment);
         mButtonGrid = (Button) findViewById(R.id.btn_grid);
+        mButtonBroadcast = (Button) findViewById(R.id.btn_broadcast);
+        mButtonService = (Button) findViewById(R.id.btn_service);
+        mButtonAssistant = (Button) findViewById(R.id.btn_assistant);
+        mButtonCustomUI = (Button) findViewById(R.id.btn_custom_ui);
+        mButtonHandler = (Button) findViewById(R.id.btn_handler);
     }
 
 
@@ -145,7 +161,7 @@ public class MainActivity extends ActionBarActivity {
         mButtonCoverFlow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, com.baixd.app.framework.coverflow.MainActivity.class);
+                        Intent intent = new Intent(MainActivity.this, CoverFlowActivity.class);
                 startActivity(intent);
             }
         });
@@ -179,6 +195,49 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, GridViewActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mButtonBroadcast.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MyBroadcastReceiverActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mButtonService.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MyServiceActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mButtonAssistant.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(MainActivity.this, MobileAssistantActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mButtonCustomUI.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, UIActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mButtonHandler.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, HandlerActivity.class);
                 startActivity(intent);
             }
         });

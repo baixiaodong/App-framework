@@ -21,7 +21,7 @@ public class CustomActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_layout);
-        this.setTitle("自定义布局");
+        this.setTitle("代码布局");
 
         LinearLayout layoutMain = new LinearLayout(this);
         layoutMain.setOrientation(LinearLayout.HORIZONTAL);
@@ -34,7 +34,7 @@ public class CustomActivity extends ActionBarActivity {
         RelativeLayout.LayoutParams relParams = new RelativeLayout.LayoutParams(
                 RelativeLayout.LayoutParams.WRAP_CONTENT,
                 RelativeLayout.LayoutParams.WRAP_CONTENT);
-        layoutMain.addView(layoutLeft, 100, 100);
+        layoutMain.addView(layoutLeft, 300, 300);
         layoutMain.addView(layoutRight, relParams);
     }
 
