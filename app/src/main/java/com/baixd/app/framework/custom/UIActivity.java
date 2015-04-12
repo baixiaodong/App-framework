@@ -1,39 +1,52 @@
 package com.baixd.app.framework.custom;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.Window;
+import android.widget.Toast;
 
 import com.baixd.app.framework.R;
+import com.baixd.app.framework.base.IBaseActivity;
 
-public class UIActivity extends ActionBarActivity {
+
+public class UIActivity extends Activity implements IBaseActivity{
+
+    private UITitleBar mTitleBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_ui);
+
+        initView();
+        registerListener();
+    }
+
+
+    @Override
+    public void init() {
+
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_ui, menu);
-        return true;
+    public void initView() {
+        mTitleBar = (UITitleBar) findViewById(R.id.titlebar);
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    public void registerListener() {
+        mTitleBar.setUITitleBarClickListener(new UITitleBar.UITitleBarClickListener() {
+            @Override
+            public void onLeftClick() {
+                    Toast.makeText(UIActivity.this, "left", Toast.LENGTH_SHORT).show();
+                    onBackPressed();
+            }
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+            @Override
+            public void onRightClick() {
+                Toast.makeText(UIActivity.this, "right", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

@@ -4,6 +4,9 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
 
     <application
         android:allowBackup="true"
@@ -21,48 +24,37 @@
         </activity>
         <activity
             android:name=".Pie3DActivity"
-            android:label="@string/title_activity_pie3_d" >
-        </activity>
+            android:label="@string/title_activity_pie3_d" />
         <activity
             android:name=".LocalDataActivity"
-            android:label="@string/title_activity_local_data" >
-        </activity>
+            android:label="@string/title_activity_local_data" />
         <activity
             android:name=".RemoteDataActivity"
-            android:label="@string/title_activity_remot_data" >
-        </activity>
+            android:label="@string/title_activity_remot_data" />
         <activity
             android:name=".DynamicListViewActivity"
-            android:label="@string/title_activity_dynamic_listview" >
-        </activity>
+            android:label="@string/title_activity_dynamic_listview" />
         <activity
             android:name=".TestListViewActivity"
-            android:label="@string/title_activity_test_list_view" >
-        </activity>
+            android:label="@string/title_activity_test_list_view" />
         <activity
             android:name=".SwipeActivity"
-            android:label="SwipeActivity" >
-        </activity>
+            android:label="SwipeActivity" />
         <activity
             android:name=".TestActivity"
-            android:label="TestActivity" >
-        </activity>
+            android:label="TestActivity" />
         <activity
             android:name=".anim.AnimationActivity"
-            android:label="@string/title_activity_animation" >
-        </activity>
+            android:label="@string/title_activity_animation" />
         <activity
             android:name=".dialog.DialogActivity"
-            android:label="@string/title_activity_dialog" >
-        </activity>
+            android:label="@string/title_activity_dialog" />
         <activity
             android:name=".scroll.ScrollActivity"
-            android:label="@string/title_activity_scroll" >
-        </activity>
+            android:label="@string/title_activity_scroll" />
         <activity
-            android:name=".coverflow.MainActivity"
-            android:label="@string/title_cover_flow" >
-        </activity>
+            android:name=".coverflow.CoverFlowActivity"
+            android:label="@string/title_cover_flow" />
         <activity
             android:name=".coverflow.example.SimpleExample"
             android:label="@string/activity_label_simple" />
@@ -77,79 +69,158 @@
             android:label="@string/activity_label_inflate_xml" />
         <activity
             android:name=".my.CustomActivity"
-            android:label="@string/title_activity_custom" >
-        </activity>
+            android:label="@string/title_activity_custom" />
         <activity
             android:name=".my.LayoutActivity"
-            android:label="@string/title_activity_layout" >
-        </activity>
+            android:label="@string/title_activity_layout" />
         <activity
             android:name=".my.TableActivity"
-            android:label="@string/title_activity_table" >
-        </activity>
+            android:label="@string/title_activity_table" />
         <activity
             android:name=".widget.CheckBoxActivity"
-            android:label="@string/title_activity_check_box" >
-        </activity>
+            android:label="@string/title_activity_check_box" />
         <activity
             android:name=".widget.WidgetActivity"
-            android:label="@string/title_activity_widget" >
-        </activity>
+            android:label="@string/title_activity_widget" />
         <activity
             android:name=".widget.RadioGroupActiviy"
-            android:label="@string/title_activity_radio_group_activiy" >
-        </activity>
+            android:label="@string/title_activity_radio_group_activiy" />
         <activity
             android:name=".widget.SpinnerActiviy"
-            android:label="@string/title_activity_spinner_activiy" >
-        </activity>
+            android:label="@string/title_activity_spinner_activiy" />
         <activity
             android:name=".widget.AutoCompleteActiviy"
-            android:label="@string/title_activity_auto_complete_activiy" >
-        </activity>
+            android:label="@string/title_activity_auto_complete_activiy" />
         <activity
             android:name=".widget.DateTimePickerActivity"
-            android:label="@string/title_activity_date_time" >
-        </activity>
+            android:label="@string/title_activity_date_time" />
         <activity
             android:name=".widget.ProgressBarActivity"
-            android:label="@string/title_activity_progress" >
-        </activity>
+            android:label="@string/title_activity_progress" />
         <activity
             android:name=".widget.SeekBarActivity"
-            android:label="@string/title_activity_seek_bar" >
-        </activity>
+            android:label="@string/title_activity_seek_bar" />
         <activity
             android:name=".widget.RatingBarActivity"
-            android:label="@string/title_activity_rating_bar" >
-        </activity>
+            android:label="@string/title_activity_rating_bar" />
         <activity
             android:name=".widget.ImageViewAndButtonActivity"
-            android:label="@string/title_activity_image_view_and_button" >
-        </activity>
+            android:label="@string/title_activity_image_view_and_button" />
         <activity
             android:name=".widget.ImageSwitchAndGalleryActivity"
-            android:label="@string/title_activity_image_switch_and_gallery" >
-        </activity>
+            android:label="@string/title_activity_image_switch_and_gallery" />
         <activity
             android:name=".fragment.FragmentActivity"
-            android:label="@string/title_activity_fragment" >
-        </activity>
+            android:label="@string/title_activity_fragment" />
         <activity
             android:name=".fragment.FirstActivity"
-            android:label="@string/title_activity_frist" >
-        </activity>
+            android:label="@string/title_activity_frist" />
         <activity
             android:name=".fragment.LifecycleFragmentActivity"
-            android:label="@string/title_activity_lifecycle_fragment" >
-        </activity>
+            android:label="@string/title_activity_lifecycle_fragment" />
         <activity
             android:name=".fragment.CommunicationActivity"
-            android:label="@string/title_activity_communication" >
-        </activity>
+            android:label="@string/title_activity_communication" />
         <activity
             android:name=".widget.GridViewActivity"
-            android:label="@string/title_activity_grid" >
+            android:label="@string/title_activity_grid" />
+        <activity
+            android:name=".my.Custom2Activity"
+            android:label="@string/title_activity_custom2" />
+        <activity
+            android:name=".widget.NotificationActivity"
+            android:label="@string/title_activity_notification" />
+
+        <receiver
+            android:name=".broadcast.MyReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MY_BROADCAST" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".broadcast.MyBroadcastReceiverActivity"
+            android:label="@string/title_activity_my_broadcast_receiver" />
+
+        <receiver
+            android:name=".broadcast.FirstReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MY_ORDER_BROADCAST" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".broadcast.SecondReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MY_ORDER_BROADCAST" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".broadcast.ThirdReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MY_ORDER_BROADCAST" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".service.MyServiceActivity"
+            android:label="@string/title_activity_my_service" />
+
+        <service
+            android:name=".service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".service.MyAlarmServiceActivity"
+            android:label="@string/title_activity_my_alarm_service" />
+
+        <receiver
+            android:name=".service.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".service.NotifyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".assistant.MobileAssistantActivity"
+            android:label="@string/title_activity_mobile_assistant" />
+        <activity
+            android:name=".assistant.SystemActivity"
+            android:label="@string/title_activity_system" />
+        <activity
+            android:name=".assistant.HardwareActivity"
+            android:label="@string/title_activity_hardware" />
+        <activity
+            android:name=".assistant.SoftwareActivity"
+            android:label="@string/title_activity_software" />
+        <activity
+            android:name=".assistant.RunningActivity"
+            android:label="@string/title_activity_running" />
+        <activity
+            android:name=".assistant.ShowInfoActivity"
+            android:label="@string/title_activity_show_info" />
+        <activity
+            android:name=".assistant.FSExplorerActivity"
+            android:label="@string/title_activity_fsexplorer" >
+        </activity>
+        <activity
+            android:name=".custom.UIActivity"
+            android:label="@string/title_activity_ui" >
+        </activity>
+        <activity
+            android:name=".handler.HandlerActivity"
+            android:label="@string/title_activity_handler" >
         </activity>
     </application>
 

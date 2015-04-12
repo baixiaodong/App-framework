@@ -1,7 +1,24 @@
 package com.baixd.app.framework.base;
 
 /**
- * Created by kk on 2015/4/7.
+ * Created by Baixd on 2015/4/7.
  */
-public class IBaseActivity {
+public interface IBaseActivity {
+
+    /**
+     * 初始化数据
+     */
+    public void init();
+
+    /**
+     * 初始化界面组件
+     */
+    public void initView();
+
+    /**
+     * 为组件注册监听事件
+     */
+    public void registerListener();
+
+
 }
