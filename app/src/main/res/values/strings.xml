@@ -71,5 +71,7 @@
     <string name="title_activity_uicustom">UICustomActivity</string>
     <string name="title_activity_ui2">UI2Activity</string>
     <string name="title_activity_handler">HandlerActivity</string>
+    <string name="title_activity_shared_preferences">SharedPreferencesActivity</string>
+    <string name="title_activity_storage">StorageActivity</string>
 
 </resources>

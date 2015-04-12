@@ -21,6 +21,7 @@ import com.baixd.app.framework.handler.HandlerActivity;
 import com.baixd.app.framework.my.LayoutActivity;
 import com.baixd.app.framework.scroll.ScrollActivity;
 import com.baixd.app.framework.service.MyServiceActivity;
+import com.baixd.app.framework.storage.StorageActivity;
 import com.baixd.app.framework.widget.GridViewActivity;
 import com.baixd.app.framework.widget.WidgetActivity;
 
@@ -48,6 +49,7 @@ public class MainActivity extends ActionBarActivity {
     private Button mButtonAssistant;
     private Button mButtonCustomUI;
     private Button mButtonHandler;
+    private Button mButtonStorage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +83,7 @@ public class MainActivity extends ActionBarActivity {
         mButtonAssistant = (Button) findViewById(R.id.btn_assistant);
         mButtonCustomUI = (Button) findViewById(R.id.btn_custom_ui);
         mButtonHandler = (Button) findViewById(R.id.btn_handler);
+        mButtonStorage = (Button) findViewById(R.id.btn_storage);
     }
 
 
@@ -238,6 +241,14 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, HandlerActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mButtonStorage.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, StorageActivity.class);
                 startActivity(intent);
             }
         });

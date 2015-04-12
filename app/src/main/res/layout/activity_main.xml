@@ -17,62 +17,62 @@
 
             <Button
                 android:id="@+id/btn_h5_local"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="本地数据展示" />
 
             <Button
                 android:id="@+id/btn_h5_remote"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btn_h5_local"
                 android:text="动态获取数据" />
 
             <Button
                 android:id="@+id/btn_listview"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btn_h5_remote"
                 android:text="List View" />
 
             <Button
                 android:id="@+id/btn_slide_listview"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btn_listview"
                 android:text="Slide List View" />
 
             <Button
                 android:id="@+id/btn_swipe_gesture"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btn_slide_listview"
                 android:text="Swipe Gesture" />
 
             <Button
                 android:id="@+id/btn_animation"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btn_swipe_gesture"
                 android:text="动画 animation" />
 
             <Button
                 android:id="@+id/btn_dialog"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btn_animation"
                 android:text="弹出对话框" />
 
             <Button
                 android:id="@+id/btn_scroll_view"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btn_dialog"
                 android:text="Scroll View" />
 
             <Button
                 android:id="@+id/btn_cover_flow"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btn_scroll_view"
                 android:text="Cover Flow" />
@@ -80,14 +80,14 @@
 
             <Button
                 android:id="@+id/btn_activity_layout"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btn_cover_flow"
                 android:text="Activity Layout" />
 
             <Button
                 android:id="@+id/btn_widget"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btn_activity_layout"
                 android:text="Widget" />
@@ -95,42 +95,42 @@
 
             <Button
                 android:id="@+id/btn_fragment"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btn_widget"
                 android:text="Fragment" />
 
             <Button
                 android:id="@+id/btn_grid"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btn_fragment"
                 android:text="GridView" />
 
             <Button
                 android:id="@+id/btn_broadcast"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btn_grid"
                 android:text="BroadCast Receiver" />
 
             <Button
                 android:id="@+id/btn_service"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btn_broadcast"
                 android:text="Service" />
 
             <Button
                 android:id="@+id/btn_assistant"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btn_service"
                 android:text="设备信息助手" />
 
             <Button
                 android:id="@+id/btn_custom_ui"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btn_assistant"
                 android:text="自定义组件" />
@@ -138,12 +138,17 @@
 
             <Button
                 android:id="@+id/btn_handler"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btn_custom_ui"
                 android:text="Handler" />
 
-
+            <Button
+                android:id="@+id/btn_storage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_handler"
+                android:text="Storage"/>
 
         </RelativeLayout>
     </ScrollView>

@@ -222,6 +222,14 @@
             android:name=".handler.HandlerActivity"
             android:label="@string/title_activity_handler" >
         </activity>
+        <activity
+            android:name=".storage.SharedPreferencesActivity"
+            android:label="@string/title_activity_shared_preferences" >
+        </activity>
+        <activity
+            android:name=".storage.StorageActivity"
+            android:label="@string/title_activity_storage" >
+        </activity>
     </application>
 
 </manifest>
