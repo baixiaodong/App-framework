@@ -15,31 +15,38 @@
         android:text="@string/dialog" />
 
     <Button
-    android:id="@+id/btn_dialog1"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_below="@id/tv_dialog"
-    android:text="两个按钮的弹出框"/>
+        android:id="@+id/btn_dialog1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_dialog"
+        android:text="两个按钮的弹出框" />
 
     <Button
         android:id="@+id/btn_dialog2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_dialog1"
-        android:text="三个按钮的弹出框"/>
+        android:text="三个按钮的弹出框" />
 
     <Button
         android:id="@+id/btn_dialog3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_dialog2"
-        android:text="弹出框是可输入型的"/>
+        android:text="弹出框是可输入型的" />
 
     <Button
         android:id="@+id/btn_dialog4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_dialog3"
-        android:text="进度条弹出框"/>
+        android:text="进度条弹出框" />
+
+    <Button
+        android:id="@+id/btn_dialog5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_dialog4"
+        android:text="异常信息显示" />
 
 </RelativeLayout>

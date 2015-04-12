@@ -1,74 +1,102 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.baixd.app.framework.widget.WidgetActivity">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent">
 
-    <TextView
-        android:id="@+id/tv_widget"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
 
-    <Button
-        android:id="@+id/btn_check_box"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_widget"
-        android:text="多选框"/>
 
-    <Button
-        android:id="@+id/btn_radio_group"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_check_box"
-        android:text="单选"/>
+        <TextView
+            android:id="@+id/tv_widget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_world" />
 
-    <Button
-        android:id="@+id/btn_spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_radio_group"
-        android:text="下拉列表"/>
+        <Button
+            android:id="@+id/btn_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_widget"
+            android:text="多选框" />
 
-    <Button
-        android:id="@+id/btn_autocomplete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_spinner"
-        android:text="自动完成"/>
+        <Button
+            android:id="@+id/btn_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_check_box"
+            android:text="单选" />
 
-    <Button
-        android:id="@+id/btn_date_time_picker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_autocomplete"
-        android:text="时间日期"/>
+        <Button
+            android:id="@+id/btn_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_radio_group"
+            android:text="下拉列表" />
 
-    <Button
-        android:id="@+id/btn_progressbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_date_time_picker"
-        android:text="进度条"/>
+        <Button
+            android:id="@+id/btn_autocomplete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_spinner"
+            android:text="自动完成" />
 
-    <Button
-        android:id="@+id/btn_seekbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_progressbar"
-        android:text="拖动条SeekBar"
-        android:onClick="openSeekBarActivity"/>
+        <Button
+            android:id="@+id/btn_date_time_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_autocomplete"
+            android:text="时间日期" />
 
-    <Button
-        android:id="@+id/btn_rating_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_seekbar"
-        android:text="评分RatingBar"/>
+        <Button
+            android:id="@+id/btn_progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_date_time_picker"
+            android:text="进度条" />
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/btn_seekbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_progressbar"
+            android:onClick="openSeekBarActivity"
+            android:text="拖动条SeekBar" />
+
+        <Button
+            android:id="@+id/btn_rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_seekbar"
+            android:text="评分RatingBar" />
+
+        <Button
+            android:id="@+id/btn_image_view_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_rating_bar"
+            android:text="ImageView和ImageButton" />
+
+        <Button
+            android:id="@+id/btn_image_switch_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_image_view_button"
+            android:onClick="openImageSwitchAndGalleryActivity"
+            android:text="ImageSwitch$Gallery" />
+
+        <Button
+            android:id="@+id/btn_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_image_switch_gallery"
+            android:onClick="onNotification"
+            android:text="notification" />
+
+    </RelativeLayout>
+
+</ScrollView>

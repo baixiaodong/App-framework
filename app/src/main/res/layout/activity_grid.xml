@@ -6,11 +6,20 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".TestActivity">
+    tools:context="com.baixd.app.framework.widget.GridViewActivity">
 
-    <TextView
+
+    <GridView
+        android:id="@+id/gv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:text="gridView"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        android:gravity="center">
+
+    </GridView>
 
 </RelativeLayout>

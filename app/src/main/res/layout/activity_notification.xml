@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.baixd.app.framework.widget.NotificationActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_activity_notification" />
+
+
+    <Button
+        android:id="@+id/btn_notification_sun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="晴空万里" />
+
+    <Button
+        android:id="@+id/btn_notification_cloudy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="阴云密布" />
+
+    <Button
+        android:id="@+id/btn_notification_rain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="大雨连绵" />
+
+    <Button
+        android:id="@+id/btn_notification_sound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="通知时发声" />
+
+    <Button
+        android:id="@+id/btn_notification_vibrate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="通知时震动" />
+
+    <Button
+        android:id="@+id/btn_notification_sound_vibrate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="通知时震动发声" />
+
+    <Button
+        android:id="@+id/btn_notification_clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="清除通知" />
+</LinearLayout>

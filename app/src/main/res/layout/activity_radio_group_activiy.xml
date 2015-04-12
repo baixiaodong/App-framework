@@ -43,6 +43,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/radio_group"
-        android:text="清除"/>
+        android:text="清除" />
 
 </RelativeLayout>

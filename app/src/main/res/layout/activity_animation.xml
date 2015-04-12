@@ -55,13 +55,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_anim_rotate"
-        android:text="animationSet 组合动画"/>
+        android:text="animationSet 组合动画" />
 
     <Button
         android:id="@+id/btn_animation_set2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_animation_set"
-        android:text="animationSet 组合动画2"/>
+        android:text="animationSet 组合动画2" />
 
 </RelativeLayout>
