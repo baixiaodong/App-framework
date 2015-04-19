@@ -16,6 +16,7 @@ import com.baixd.app.framework.broadcast.MyBroadcastReceiverActivity;
 import com.baixd.app.framework.coverflow.CoverFlowActivity;
 import com.baixd.app.framework.custom.UIActivity;
 import com.baixd.app.framework.dialog.DialogActivity;
+import com.baixd.app.framework.downloader.DownloaderActivity;
 import com.baixd.app.framework.fragment.FragmentActivity;
 import com.baixd.app.framework.handler.HandlerActivity;
 import com.baixd.app.framework.my.LayoutActivity;
@@ -50,6 +51,7 @@ public class MainActivity extends ActionBarActivity {
     private Button mButtonCustomUI;
     private Button mButtonHandler;
     private Button mButtonStorage;
+    private Button mButtonDownloader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,6 +86,7 @@ public class MainActivity extends ActionBarActivity {
         mButtonCustomUI = (Button) findViewById(R.id.btn_custom_ui);
         mButtonHandler = (Button) findViewById(R.id.btn_handler);
         mButtonStorage = (Button) findViewById(R.id.btn_storage);
+        mButtonDownloader = (Button) findViewById(R.id.btn_downloader);
     }
 
 
@@ -249,6 +252,14 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, StorageActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mButtonDownloader.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, DownloaderActivity.class);
                 startActivity(intent);
             }
         });

@@ -150,6 +150,13 @@
                 android:layout_below="@id/btn_handler"
                 android:text="Storage"/>
 
+            <Button
+                android:id="@+id/btn_downloader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_storage"
+                android:text="downloader"/>
+
         </RelativeLayout>
     </ScrollView>
 </LinearLayout>

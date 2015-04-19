@@ -230,6 +230,16 @@
             android:name=".storage.StorageActivity"
             android:label="@string/title_activity_storage" >
         </activity>
+        <activity
+            android:name=".downloader.DownloaderActivity"
+            android:label="@string/title_activity_downloader" >
+        </activity>
+
+        <service
+            android:name=".downloader.DownloadService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
     </application>
 
 </manifest>

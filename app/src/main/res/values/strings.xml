@@ -73,5 +73,6 @@
     <string name="title_activity_handler">HandlerActivity</string>
     <string name="title_activity_shared_preferences">SharedPreferencesActivity</string>
     <string name="title_activity_storage">StorageActivity</string>
+    <string name="title_activity_downloader">DownloaderActivity</string>
 
 </resources>
