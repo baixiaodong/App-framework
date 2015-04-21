@@ -38,8 +38,8 @@ public class DownloaderActivity extends ActionBarActivity implements IBaseActivi
 
         //创建文件对象
         mFileInfo = new FileInfo(0,
-                "http://lx.cdn.baidupcs.com/file/5885c1621b14a7852d2f7f383a47db33?bkt=p-f2d98a525e3a77db2cb4c6f3c89361ff&xcode=62414892cd6afedc2cb8f966f51f1b9c7d971ffc8eeb0cedae97ca166f54709c&fid=2533653075-250528-3347951802&time=1429434852&sign=FDTAXERLBH-DCb740ccc5511e5e8fedcff06b081203-3vvCxui21I192e46NkGvk%2B9CESM%3D&to=cb&fm=Qin,B,U,ny&sta_dx=10&sta_cs=62&sta_ft=mp3&sta_ct=7&newver=1&newfm=1&flow_ver=3&sl=75628623&expires=8h&rt=pr&r=663044551&mlogid=1260042379&vuk=2533653075&vbdid=4213482117&fin=02%20%E6%9B%B4%E5%A5%BD%E7%9A%84%E6%88%91.mp3&fn=02%20%E6%9B%B4%E5%A5%BD%E7%9A%84%E6%88%91.mp3&slt=pm&uta=0",
-                "更好的我.mp3", 0, 0);
+                "http://www.imooc.com/mobile/imooc.apk",
+                "imooc.apk", 0, 0);
 
         init();
         initView();
