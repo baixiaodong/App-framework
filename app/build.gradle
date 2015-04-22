@@ -25,7 +25,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(dir: 'libs', include: ['afinal_0.5.1_bin.jar'])
     compile 'com.android.support:appcompat-v7:19.+'
     //    compile group: 'com.alibaba', name: 'fastjson', version: '1.2.3'
     compile project(':mylibrary')

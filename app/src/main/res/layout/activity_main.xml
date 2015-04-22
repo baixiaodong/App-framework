@@ -155,7 +155,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btn_storage"
-                android:text="downloader"/>
+                android:text="Downloader"/>
+
+            <Button
+                android:id="@+id/btn_exception_handler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_downloader"
+                android:text="Exception Hanlder"/>
 
         </RelativeLayout>
     </ScrollView>

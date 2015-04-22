@@ -17,6 +17,7 @@ import com.baixd.app.framework.coverflow.CoverFlowActivity;
 import com.baixd.app.framework.custom.UIActivity;
 import com.baixd.app.framework.dialog.DialogActivity;
 import com.baixd.app.framework.downloader.DownloaderActivity;
+import com.baixd.app.framework.exception.ExceptionHandleActivity;
 import com.baixd.app.framework.fragment.FragmentActivity;
 import com.baixd.app.framework.handler.HandlerActivity;
 import com.baixd.app.framework.my.LayoutActivity;
@@ -26,8 +27,11 @@ import com.baixd.app.framework.storage.StorageActivity;
 import com.baixd.app.framework.widget.GridViewActivity;
 import com.baixd.app.framework.widget.WidgetActivity;
 
+import net.tsz.afinal.FinalActivity;
+import net.tsz.afinal.annotation.view.ViewInject;
 
-public class MainActivity extends ActionBarActivity {
+
+public class MainActivity extends FinalActivity {
 
     private static final String TAG = "MainActivity";
 
@@ -52,6 +56,9 @@ public class MainActivity extends ActionBarActivity {
     private Button mButtonHandler;
     private Button mButtonStorage;
     private Button mButtonDownloader;
+
+    @ViewInject(id = R.id.btn_exception_handler, click = "clickExceptionHandler")
+    Button mButtonExceptionListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -264,6 +271,11 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
+    }
+
+    public void clickExceptionHandler(View view){
+        Intent intent = new Intent(MainActivity.this, ExceptionHandleActivity.class);
+        startActivity(intent);
     }
 
     @Override
