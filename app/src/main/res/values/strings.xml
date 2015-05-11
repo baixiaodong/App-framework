@@ -75,5 +75,7 @@
     <string name="title_activity_storage">StorageActivity</string>
     <string name="title_activity_downloader">DownloaderActivity</string>
     <string name="title_activity_exception_handle">ExceptionHandleActivity</string>
+    <string name="title_activity_my_view_inject">MyViewInjectActivity</string>
+    <string name="title_activity_my_common_adapter">MyCommonAdapterActivity</string>
 
 </resources>

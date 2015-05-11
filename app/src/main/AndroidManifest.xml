@@ -246,6 +246,14 @@
             android:name=".exception.ExceptionHandleActivity"
             android:label="@string/title_activity_exception_handle" >
         </activity>
+        <activity
+            android:name=".annotation.MyViewInjectActivity"
+            android:label="@string/title_activity_my_view_inject" >
+        </activity>
+        <activity
+            android:name=".adapter.MyCommonAdapterActivity"
+            android:label="@string/title_activity_my_common_adapter" >
+        </activity>
     </application>
 
 </manifest>

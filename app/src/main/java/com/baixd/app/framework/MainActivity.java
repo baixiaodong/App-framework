@@ -10,7 +10,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.baixd.app.framework.adapter.MyCommonAdapterActivity;
 import com.baixd.app.framework.anim.AnimationActivity;
+import com.baixd.app.framework.annotation.MyViewInjectActivity;
 import com.baixd.app.framework.assistant.MobileAssistantActivity;
 import com.baixd.app.framework.broadcast.MyBroadcastReceiverActivity;
 import com.baixd.app.framework.coverflow.CoverFlowActivity;
@@ -59,6 +61,12 @@ public class MainActivity extends FinalActivity {
 
     @ViewInject(id = R.id.btn_exception_handler, click = "clickExceptionHandler")
     Button mButtonExceptionListener;
+
+    @ViewInject(id = R.id.btn_myview_inject, click = "clickMyViewInject")
+    Button mButtonMyViewInecjt;
+
+    @ViewInject(id=R.id.btn_common_adapter, click = "clickCommonAdapter")
+    Button mCommonAdatper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -275,6 +283,16 @@ public class MainActivity extends FinalActivity {
 
     public void clickExceptionHandler(View view){
         Intent intent = new Intent(MainActivity.this, ExceptionHandleActivity.class);
+        startActivity(intent);
+    }
+
+    public void clickMyViewInject(View view){
+        Intent intent = new Intent(MainActivity.this, MyViewInjectActivity.class);
+        startActivity(intent);
+    }
+
+    public void clickCommonAdapter(View view){
+        Intent intent = new Intent(MainActivity.this, MyCommonAdapterActivity.class);
         startActivity(intent);
     }
 

@@ -164,6 +164,21 @@
                 android:layout_below="@id/btn_downloader"
                 android:text="Exception Hanlder"/>
 
+            <Button
+                android:id="@+id/btn_myview_inject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_exception_handler"
+                android:text="MyView Inject"/>
+
+            <Button
+                android:id="@+id/btn_common_adapter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_myview_inject"
+                android:text="Common Adapter"/>
+
+
         </RelativeLayout>
     </ScrollView>
 </LinearLayout>
