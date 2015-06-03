@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import com.baixd.app.framework.adapter.MyCommonAdapterActivity;
 import com.baixd.app.framework.anim.AnimationActivity;
+import com.baixd.app.framework.annotation.EAnnotationActivity;
+import com.baixd.app.framework.annotation.EAnnotationActivity_;
 import com.baixd.app.framework.annotation.MyViewInjectActivity;
 import com.baixd.app.framework.assistant.MobileAssistantActivity;
 import com.baixd.app.framework.broadcast.MyBroadcastReceiverActivity;
@@ -22,7 +24,9 @@ import com.baixd.app.framework.downloader.DownloaderActivity;
 import com.baixd.app.framework.exception.ExceptionHandleActivity;
 import com.baixd.app.framework.fragment.FragmentActivity;
 import com.baixd.app.framework.handler.HandlerActivity;
+import com.baixd.app.framework.lifecycle.ActivityLifeCycleActivity;
 import com.baixd.app.framework.my.LayoutActivity;
+import com.baixd.app.framework.opengl.OpenGlESActivity;
 import com.baixd.app.framework.scroll.ScrollActivity;
 import com.baixd.app.framework.service.MyServiceActivity;
 import com.baixd.app.framework.storage.StorageActivity;
@@ -67,6 +71,13 @@ public class MainActivity extends FinalActivity {
 
     @ViewInject(id=R.id.btn_common_adapter, click = "clickCommonAdapter")
     Button mCommonAdatper;
+    @ViewInject(id=R.id.btn_opengles, click = "clickOpenGlES")
+    Button mOpenGlES;
+    @ViewInject(id=R.id.btn_annotation_ioc, click = "clickAnnotationIoc")
+    Button mAnnotaionIoc;
+    @ViewInject(id=R.id.btn_activity_lifecycle, click = "clickActivityLifecycle")
+    Button mActivityLifecycle;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -293,6 +304,21 @@ public class MainActivity extends FinalActivity {
 
     public void clickCommonAdapter(View view){
         Intent intent = new Intent(MainActivity.this, MyCommonAdapterActivity.class);
+        startActivity(intent);
+    }
+
+    public void clickOpenGlES(View view){
+        Intent intent = new Intent(MainActivity.this, OpenGlESActivity.class);
+        startActivity(intent);
+    }
+
+    public void clickAnnotationIoc(View view){
+        Intent intent = new Intent(MainActivity.this, EAnnotationActivity_.class);
+        startActivity(intent);
+    }
+
+    public void clickActivityLifecycle(View view){
+        Intent intent = new Intent(MainActivity.this, ActivityLifeCycleActivity.class);
         startActivity(intent);
     }
 

@@ -77,5 +77,8 @@
     <string name="title_activity_exception_handle">ExceptionHandleActivity</string>
     <string name="title_activity_my_view_inject">MyViewInjectActivity</string>
     <string name="title_activity_my_common_adapter">MyCommonAdapterActivity</string>
+    <string name="title_activity_open_gl_es">OpenGlESActivity</string>
+    <string name="title_activity_eannotation">EAnnotationActivity</string>
+    <string name="title_activity_new_lifecycle">NewLifecycleActivity</string>
 
 </resources>

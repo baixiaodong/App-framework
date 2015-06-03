@@ -178,6 +178,28 @@
                 android:layout_below="@id/btn_myview_inject"
                 android:text="Common Adapter"/>
 
+            <Button
+                android:id="@+id/btn_opengles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_common_adapter"
+                android:text="OpenGl ES"/>
+
+            <Button
+                android:id="@+id/btn_annotation_ioc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_opengles"
+                android:text="注解依赖"/>
+
+            <Button
+                android:id="@+id/btn_activity_lifecycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_annotation_ioc"
+                android:text="activity生命周期"/>
+
+
 
         </RelativeLayout>
     </ScrollView>

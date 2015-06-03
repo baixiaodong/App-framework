@@ -254,6 +254,19 @@
             android:name=".adapter.MyCommonAdapterActivity"
             android:label="@string/title_activity_my_common_adapter" >
         </activity>
+        <activity
+            android:name=".opengl.OpenGlESActivity"
+            android:label="@string/title_activity_open_gl_es" >
+        </activity>
+        <activity
+            android:name=".annotation.EAnnotationActivity_"
+            android:label="@string/title_activity_eannotation" >
+        </activity>
+        <activity android:name=".lifecycle.ActivityLifeCycleActivity" />
+        <activity
+            android:name=".lifecycle.NewLifecycleActivity"
+            android:label="@string/title_activity_new_lifecycle" >
+        </activity>
     </application>
 
 </manifest>
