@@ -6,9 +6,17 @@ buildscript {
         jcenter()
         mavenLocal()
         mavenCentral()
+        maven {
+            credentials {
+                username 'developer'
+                password 'cattsoft'
+            }
+            url 'http://teds.cattsoft.com/nexus/content/groups/public/'
+        }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.0'
+        classpath 'com.android.tools.build:gradle:1.2.3'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -16,10 +24,17 @@ buildscript {
 }
 
 allprojects {
-    repositories {
+        repositories {
 
         jcenter()
         mavenLocal()
         mavenCentral()
+        maven {
+            credentials {
+                username 'developer'
+                password 'cattsoft'
+            }
+            url 'http://teds.cattsoft.com/nexus/content/groups/public/'
+        }
     }
 }
