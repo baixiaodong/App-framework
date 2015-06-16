@@ -7,14 +7,14 @@ import java.util.List;
  */
 public interface ThreadDAO {
 
-    public void insertThread(ThreadInfo threadInfo);
+    void insertThread(ThreadInfo threadInfo);
 
-    public void deleteThread(String url, int threadId);
+    void deleteThread(String url, int threadId);
 
-    public void updateThread(String url, int threadId, int finished);
+    void updateThread(String url, int threadId, int finished);
 
-    public List<ThreadInfo> getThreads(String url);
+    List<ThreadInfo> getThreads(String url);
 
-    public boolean isExistsThread(String url, int threadId);
+    boolean isExistsThread(String url, int threadId);
 
 }
